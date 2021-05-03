@@ -2,7 +2,7 @@
 name = "tensorflow_practice"
 version = "0.1.5"
 description = ""
-authors = ["kazzogawa"]
+authors = ["kazuogawa"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
