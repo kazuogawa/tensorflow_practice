@@ -1,7 +1,13 @@
-run/beginner:
-	poetry run python src/main.py
+_run/%:
+	poetry run python src/main.py ${executor_name}
 
-formatter:
+run/minist: executor_name := minist
+run/minist: _run/minist
+
+run/fashion_minist: executor_name := fashion_minist
+run/fashion_minist: _run/fashion_minist
+
+format:
 	poetry run black .
 	poetry run isort .
 
