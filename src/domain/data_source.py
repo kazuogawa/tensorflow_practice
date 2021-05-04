@@ -8,3 +8,4 @@ class DataSource(ABC):
     y_train: ndarray
     x_test: ndarray
     y_test: ndarray
+    label_dict: dict

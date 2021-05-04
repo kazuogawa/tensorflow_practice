@@ -12,15 +12,15 @@ class FashionMinist(DataSource):
     y_train: ndarray
     x_test: ndarray
     y_test: ndarray
-    label_name = [
-        "T-shirt/top",
-        "Trouser",
-        "Pullover",
-        "Dress",
-        "Coat",
-        "Sandal",
-        "Shirt",
-        "Sneaker",
-        "Bag",
-        "Ankle boot",
-    ]
+    label_dict = {
+        0: "T-shirt/top",
+        1: "Trouser",
+        2: "Pullover",
+        3: "Dress",
+        4: "Coat",
+        5: "Sandal",
+        6: "Shirt",
+        7: "Sneaker",
+        8: "Bag",
+        9: "Ankle boot",
+    }

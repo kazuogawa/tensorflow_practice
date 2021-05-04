@@ -1,13 +1,14 @@
 [tool.poetry]
 name = "tensorflow_practice"
-version = "0.1.5"
+version = "0.1.7"
 description = ""
 authors = ["kazuogawa"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 tensorflow = "2.4.1"
-
+matplotlib = "3.4.1"
+scikit-learn = "0.24.0"
 
 [tool.poetry.dev-dependencies]
 black = "21.4b2"
