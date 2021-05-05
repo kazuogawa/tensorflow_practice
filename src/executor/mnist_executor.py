@@ -1,12 +1,11 @@
 import tensorflow as tf
-from sklearn.metrics import accuracy_score
 from tensorflow import Tensor
 from tensorflow.python.keras.engine.sequential import Sequential
 
 from executor.executor import Executor
 
 
-class QuickStartBeginner(Executor):
+class MnistExecutor(Executor):
     """
     https://www.tensorflow.org/tutorials/quickstart/beginner?hl=ja
     """
@@ -36,7 +35,7 @@ class QuickStartBeginner(Executor):
         # 損失関数。下記の書き方をすればそれぞれの標本についてクラスごとに損失のスカラを返す
         loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
         # loss確認する場合はコメント外す
-        # loss = loss_fn(minist.y_train[:1], predictions).numpy()
+        # loss = loss_fn(mnist.y_train[:1], predictions).numpy()
         model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
         model.fit(self.data_source.x_train, self.data_source.y_train, epochs=5)
         model.evaluate(self.data_source.x_test, self.data_source.y_test, verbose=2)

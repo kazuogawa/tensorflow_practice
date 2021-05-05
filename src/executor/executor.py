@@ -4,13 +4,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 from tensorflow.python.keras.engine.sequential import Sequential
 
+from preprocessor.preprocessor import Preprocessor
 from repository.repository import Repository
 
 
 class Executor(ABC):
-    def __init__(self, repository: Repository):
+    def __init__(self, repository: Repository, preprocessor: Preprocessor):
         self.repository = repository
-        self.data_source = repository.get_data()
+        self.preprocessor = preprocessor
+        self.data_source = preprocessor.run(repository.get_data())
 
     def generate_model(self) -> Sequential:
         pass

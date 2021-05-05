@@ -9,3 +9,5 @@ class DataSource(ABC):
     x_test: ndarray
     y_test: ndarray
     label_dict: dict
+    height: int
+    width: int

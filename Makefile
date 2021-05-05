@@ -1,11 +1,11 @@
 _run/%:
 	poetry run python src/main.py ${executor_name}
 
-run/minist: executor_name := minist
-run/minist: _run/minist
+run/mnist: executor_name := mnist
+run/mnist: _run/mnist
 
-run/fashion_minist: executor_name := fashion_minist
-run/fashion_minist: _run/fashion_minist
+run/fashion_mnist: executor_name := fashion_mnist
+run/fashion_mnist: _run/fashion_mnist
 
 format:
 	poetry run black .

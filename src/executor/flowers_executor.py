@@ -4,7 +4,7 @@ from tensorflow.python.keras.engine.sequential import Sequential
 from executor.executor import Executor
 
 
-class FashionMinist(Executor):
+class Flowers(Executor):
     """
     https://www.tensorflow.org/tutorials/keras/classification?hl=ja
     実行するたびに結構変わる

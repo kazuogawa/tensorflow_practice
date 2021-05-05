@@ -3,11 +3,11 @@ from typing import List
 
 from numpy import ndarray
 
-from domain.data_source import DataSource
+from domain.data_source.data_source import DataSource
 
 
 @dataclass
-class FashionMinist(DataSource):
+class FashionMnist(DataSource):
     x_train: ndarray
     y_train: ndarray
     x_test: ndarray
