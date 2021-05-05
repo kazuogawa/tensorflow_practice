@@ -48,7 +48,7 @@ class QuickStartBeginner(Executor):
         probability_model = tf.keras.Sequential(
             [fitted_model, tf.keras.layers.Softmax()]
         )
-
-        test_predict: Tensor = probability_model(self.data_source.x_test[:5])
-        print("test_predict", tf.math.argmax(test_predict, 1))
-        print("test_ans: ", self.data_source.y_test[:5])
+        y_pred: Tensor = probability_model(self.data_source.x_test)
+        self.plot_x_and_probability_and_ans(
+            self.data_source.x_test, self.data_source.y_test, y_pred
+        )
